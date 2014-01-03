@@ -113,99 +113,11 @@ a:hover {
   background: #1E2F3F;
 }
 
-.container > header {
-  width: 90%;
-  max-width: 69em;
-  margin: 0 auto;
-  padding: 2.875em 1.875em 1.875em;
-}
-
 .main {
   width: 95%;
   padding: 1em;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
-}
-
-.container > header h1 {
-  font-size: 2.125em;
-  line-height: 1.3;
-  margin: 0 0 0.6em 0;
-  float: left;
-  font-weight: 400;
-}
-
-.container > header > span {
-  display: block;
-  position: relative;
-  z-index: 9999;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  padding: 0 0 0.6em 0.1em;
-}
-
-.container > header > span span:after {
-  width: 30px;
-  height: 30px;
-  left: -12px;
-  font-size: 50%;
-  top: -8px;
-  font-size: 75%;
-  position: relative;
-}
-
-.container > header > span span:hover:before {
-  content: attr(data-content);
-  text-transform: none;
-  text-indent: 0;
-  letter-spacing: 0;
-  font-weight: 300;
-  font-size: 110%;
-  padding: 0.8em 1em;
-  line-height: 1.2;
-  text-align: left;
-  left: auto;
-  margin-left: 4px;
-  position: absolute;
-  color: #fff;
-  background: #47a3da;
-}
-
-.container > header nav {
-  float: right;
-  text-align: center;
-}
-
-.container > header nav a {
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  width: 2.5em;
-  height: 2.5em;
-  background: #fff;
-  border-radius: 50%;
-  margin: 0 0.1em;
-  border: 4px solid #47a3da;
-}
-
-.container > header nav a > span {
-  display: none;
-}
-
-.container > header nav a:hover:before {
-  content: attr(data-info);
-  color: #47a3da;
-  position: absolute;
-  width: 600%;
-  top: 120%;
-  text-align: right;
-  right: 0;
-  pointer-events: none;
-}
-
-.container > header nav a:hover {
-  background: #47a3da;
 }
 
 /* LI GRID */
@@ -216,10 +128,14 @@ a:hover {
   margin: 1em;
 }
 
+.spacer {
+  height: 2em;
+}
+
 .profile {
   height: 10em;
   width: 10em;
-  margin: 2em auto;
+  margin: 0 auto;
   background: url(../img/me.jpg) no-repeat 42% 30%;
   background-size: 200%;
   -webkit-border-radius: 50em;
@@ -227,11 +143,12 @@ a:hover {
   border-radius: 50em;
 }
 
-.grid p {
+.grid li:first-child p {
   font-weight: 100;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: white;
-  padding: 0 1em 1em 1em;
+  padding: 1em 1em 0em 1em;
+  margin-bottom: 0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -358,6 +275,10 @@ a:hover {
   -webkit-transition: transform 0.3s, opacity 0.2s;
 }
 
+.grid li:first-child a:hover .title:before {
+  margin-top: 80px;
+}
+
 .grid li:hover .category,
 .touch .grid li .category {
   opacity: 1;
@@ -371,6 +292,7 @@ a:hover {
 
 .grid li > a:hover {
   background: #47a3da;
+  -webkit-transition: background-color 300ms ease-in;
 }
 
 .grid li > a:hover .icon:before,
@@ -392,8 +314,22 @@ a:hover {
 
 
 .contact {
-  height: 300px;
+  height: 60px;
   background-color: #232323;
+}
+
+.contact p {
+  font-weight: 100;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 1.2em 2em;
+  text-align: right;
+}
+
+.contact p span {
+  color: #B53D1F;
+  margin: 0 0.3em;
 }
 
 
@@ -435,7 +371,6 @@ a:hover {
 }
 
 @media screen and (max-width: 55em) {
-
   .container > header h1,
   .container > header nav {
     float: none;
@@ -453,7 +388,6 @@ a:hover {
   .container > header > span {
     text-indent: 30px;
   }
-
 }
 
 @media screen and (max-height: 45em) {
@@ -483,6 +417,11 @@ a:hover {
   .grid li:first-child {
     border-top: none;
   }
+
+  .contact p {
+    font-size: 0.9em;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 25em) { 
@@ -490,8 +429,16 @@ a:hover {
     font-size: 80%;
   }
 
+  .grid li:first-child .category {
+    margin-top: 30px;
+  }
+
   .grid .category {
     margin-top: 20px;
+  }
+
+  .grid li > a:hover .title:before {
+    margin-top: 50px;
   }
 
   .hero {
