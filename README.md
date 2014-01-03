@@ -1,3 +1,7 @@
-Created by Codrops
+Inspiration from Codrop & Blacktie.
 
-Please read more about our license here: http://tympanus.net/codrops/licensing/ 
+TO DO
+
+1. Contact Form
+2. Skills Charts
+3. Experience & Education?
