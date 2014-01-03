@@ -67,12 +67,11 @@ a:hover {
 
 .hero p {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.5em;
   display: block;
   letter-spacing: 3px;
   text-align: center;
-  text-transform: uppercase;
   padding: 0.4em 1em;
 }
 
@@ -125,6 +124,7 @@ a:hover {
   width: 95%;
   padding: 1em;
   margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container > header h1 {
@@ -232,6 +232,7 @@ a:hover {
   font-size: 1.5em;
   color: white;
   padding: 0 1em 1em 1em;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -347,7 +348,6 @@ a:hover {
   font-size: 1em;
   letter-spacing: 1px;
   color: #fff;
-  margin-top: 10px;
   -webkit-transform: translateY(10px);
   -moz-transform: -moz-translateY(10px);
   -ms-transform: -ms-translateY(10px);
@@ -387,7 +387,7 @@ a:hover {
 
 .grid li > a:hover .title:before {
   background: #fff;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 
