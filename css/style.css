@@ -42,8 +42,8 @@ a:hover {
   margin: 0;
   padding: 0;
   border: 0;
-  background: url(../img/fog_toronto.jpg) no-repeat center top;
-  background-size: contain;
+  background: url(../img/fog_toronto.jpg) no-repeat center bottom;
+  background-size: cover;
   color: #fff;
   text-align: center;
   /* -webkit-background-clip clips the background of the element to the text */
@@ -125,7 +125,8 @@ a:hover {
 .grid {
   list-style: none;
   max-height: 100%;
-  margin: 1em;
+  margin: 0.3em;
+  padding-left: 0;
 }
 
 .spacer {
@@ -147,9 +148,13 @@ a:hover {
   font-weight: 100;
   font-size: 1.3em;
   color: white;
-  padding: 1em 1em 0em 1em;
+  padding: 1em 1em -0.5em 1em;
   margin-bottom: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+.grid li:first-child a:hover .title:before {
+  margin-top: 5em;
 }
 
 
@@ -275,10 +280,6 @@ a:hover {
   -webkit-transition: transform 0.3s, opacity 0.2s;
 }
 
-.grid li:first-child a:hover .title:before {
-  margin-top: 80px;
-}
-
 .grid li:hover .category,
 .touch .grid li .category {
   opacity: 1;
@@ -290,10 +291,10 @@ a:hover {
 
 /* Hover styles */
 
-.grid li > a:hover {
+/*.grid li > a:hover {
   background: #47a3da;
   -webkit-transition: background-color 300ms ease-in;
-}
+}*/
 
 .grid li > a:hover .icon:before,
 .grid li > a:hover .title {
@@ -332,6 +333,7 @@ a:hover {
   margin: 0 0.3em;
 }
 
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 62.75em) {
   .grid li {
@@ -391,12 +393,19 @@ a:hover {
 }
 
 @media screen and (max-height: 45em) {
+  .hero h1 {
+    font-size: 11em;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-height: 40em) {
   .hero {
-    background-size: 70%;
+    background-position: cover;
   }
 
   .hero h1 {
-    font-size: 11em;
+    font-size: 5em;
     padding-top: 0;
   }
 }
@@ -427,10 +436,16 @@ a:hover {
 @media screen and (max-width: 25em) { 
   .grid {
     font-size: 80%;
+    padding-left: 0;
   }
 
   .grid li:first-child .category {
-    margin-top: 30px;
+    margin-top: 40px;
+  }
+
+  .grid h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .grid .category {
@@ -438,7 +453,7 @@ a:hover {
   }
 
   .grid li > a:hover .title:before {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
   .hero {
