@@ -107,9 +107,31 @@ a:hover {
   font-size: 3em;
   -webkit-text-fill-color: white;
 }
+
+.arrow1 {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: #1E2F3F;
+  cursor: pointer;
+  -webkit-transition: background-color 700ms ease-out;
+}
+
+.arrow1:hover {
+  background-color: #2194D3; 
+  -webkit-transition: background-color 700ms ease-out;
+}
+
+.arrow1 i {
+  font-size: 3em;
+  -webkit-text-fill-color: white;
+}
+
 /* CONTACT INFO CONTAINER DIV */
 
 .container {
+  position: relative;
   height: 100%;
   background: #1E2F3F;
 }
@@ -153,6 +175,7 @@ a:hover {
   padding: 1em 1em -0.5em 1em;
   margin: 2em auto;
   margin-bottom: 0;
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -247,6 +270,8 @@ a:hover {
   margin: 20px 0 10px 0;
   padding: 10px 0 0 0;
   font-size: 2em;
+  font-weight: 900;
+  text-transform: capitalize;
   position: relative;
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
@@ -378,6 +403,10 @@ a:hover {
     display: none;
   }
 
+  .arrow1 {
+    display: none;
+  }
+
   .page {
     font-size: 100%;
   }
@@ -423,7 +452,7 @@ a:hover {
 
 @media screen and (max-width: 41.6em) { 
   .container {
-    height: 260%;
+    height: 210%;
   }
 
   .grid li {
@@ -454,7 +483,7 @@ a:hover {
 
 @media screen and (max-width: 25em) { 
   .container {
-    height: 210%;
+    height: 175%;
   }
 
   .grid {
@@ -480,14 +509,15 @@ a:hover {
   }
 
   .hero {
-    height: 45%;
-    background-size: 150%;
+    height: 35%;
+    background-size: 95%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .hero {
-    height: 40%;
+    height: 25%;
+    background-size: 80%;
   }
 
   .hero h1 {

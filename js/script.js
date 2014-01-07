@@ -3,15 +3,19 @@ $(document).ready(function(){
 // Scrolling
 
   $('.arrow').click( function() {
-    var target = '#container';
+    var target = ".container";
     scrollToElement(target)
-    $('.arrow a i').css("-webkit-text-fill-color", "#1E2F3F")
+  });
+
+  $('.arrow1').click( function() {
+    var target = ".split";
+    scrollToElement(target)
   });
 
 function scrollToElement(target) {
   var topoffset = -50;
   var speed = 800;
-  var destination = $('.arrow').offset().top - topoffset;
+  var destination = $(target).offset().top;
   $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
   });
   return false;

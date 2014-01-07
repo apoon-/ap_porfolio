@@ -55,7 +55,7 @@
 		var onEndTransFn = function() {
 				this.removeEventListener( transEndEventName, onEndTransFn );
 				classie.add( splitlayout, 'reset-layout' );
-				document.body.scrollTop = document.documentElement.scrollTop = 0;
+				document.body.scrollTop = document.documentElement.scrollTop = $(".split").offset().top;
 			},
 			backToIntro = function( ev ) {
 				ev.preventDefault();

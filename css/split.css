@@ -90,6 +90,7 @@ body {
 	left: 50%;
 	padding: 0 1em;
 	width: 50%;
+	font-size: 60%;
 	cursor: pointer;
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
@@ -109,8 +110,8 @@ body {
 }
 
 .intro-content h1 > span:first-child {
-	font-weight: 300;
-	font-size: 2em;
+	font-weight: 500;
+	font-size: 3em;
 }
 
 .intro-content h1 > span:nth-child(2) {
@@ -120,7 +121,7 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 100;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .intro-content h1 > span:nth-child(2):before {
@@ -152,8 +153,8 @@ body {
 }
 
 .back {
-	position: fixed;
-	top: 2.6em;
+	position: absolute;
+	top: 0;
 	z-index: 500;
 	display: block;
 	visibility: hidden;
@@ -162,8 +163,7 @@ body {
 	border-radius: 50%;
 	color: #47a3da;
 	text-align: center;
-	font-size: 22px;
-	line-height: 44px;
+	font-size: 3em;
 	opacity: 0;
 	pointer-events: none;
 }
@@ -369,12 +369,15 @@ body {
 
 /* Media Queries */
 @media screen and (max-width: 83em) {
-	.intro-content { font-size: 60%; }
+/*	.intro-content { 
+		font-size: 90%; 
+	}*/
 }
 
 @media screen and (max-width: 58em) {
-	body { font-size: 90%; }
-}
+	.intro-content h1 {
+		font-size: 1.3em;
+	}
 
 @media screen and (max-width: 49.4375em) {
 	.open-right .side-right {
@@ -441,8 +444,9 @@ body {
 }
 
 @media screen and (max-width: 42.5em) {
-	body { font-size: 80%; }
-	.intro-content { font-size: 50%; }
+	body { 
+		font-size: 80%; 
+	}
 }
 
 @media screen and (max-height: 41.125em) {
